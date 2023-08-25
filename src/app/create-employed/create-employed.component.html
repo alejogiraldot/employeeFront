@@ -1,0 +1,37 @@
+<div class="container">
+    <h2>Crear Empleado</h2>
+    <form (ngSubmit)="createEmployed()">
+      <label for="documentType">Tipo de documento:</label>
+      <select id="documentType" [(ngModel)]="createEmployedRequest.documentType" name="documentType">
+        <option value="cedula">Cédula</option>
+        <option value="tarjeta de identidad">Tarjeta de Identidad</option>
+      </select>
+  
+      <label for="documentNumber">Número de documento:</label>
+      <input type="text" id="documentNumber" [(ngModel)]="createEmployedRequest.documentNumber" name="documentNumber" required>
+  
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" [(ngModel)]="createEmployedRequest.name" name="name" required>
+  
+      <label for="lastName">Apellido:</label>
+      <input type="text" id="lastName" [(ngModel)]="createEmployedRequest.lastName" name="lastName" required>
+  
+      <label for="city">Ciudad:</label>
+      <input type="text" id="city" [(ngModel)]="createEmployedRequest.city" name="city" required>
+  
+      <label for="direction">Dirección:</label>
+      <input type="text" id="direction" [(ngModel)]="createEmployedRequest.direction" name="direction" required>
+  
+      <label for="employedCity">Ciudad del empleo:</label>
+      <input type="text" id="employedCity" [(ngModel)]="createEmployedRequest.employedCity" name="employedCity" required>
+  
+      <label for="phoneNumber">Número de teléfono:</label>
+      <input type="text" id="phoneNumber" [(ngModel)]="createEmployedRequest.phoneNumber" name="phoneNumber" required>
+
+      <label for="phoneNumber">Id de Departamento</label>
+      <input type="text" id="phoneNumber" [(ngModel)]="createEmployedRequest.departmentId.id" name="phoneNumber" required>
+  
+      <button type="submit">Crear Empleado</button>
+
+    </form>
+  </div>

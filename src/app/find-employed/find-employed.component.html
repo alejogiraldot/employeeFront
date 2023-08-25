@@ -1,0 +1,20 @@
+<div class="container">
+  <label for="employeeId">ID del Empleado:</label>
+  <input type="number" id="employeeId" name="employeeId" [(ngModel)]="employeeId">
+  <button (click)="findEmployed()">Buscar Empleado</button>
+</div>
+
+<div *ngIf="findEmployedResponse && findEmployedResponse.name" class="container">
+  <h2>Información del Empleado</h2>
+  <p>Nombre: {{ findEmployedResponse.name }}</p>
+  <p>Ciudad: {{ findEmployedResponse.city }}</p>
+  <p>Número de Teléfono: {{ findEmployedResponse.phoneNumber }}</p>
+  <p>Tipo de documento: {{ findEmployedResponse.documentType }}</p>
+  <p>Numero de documento: {{ findEmployedResponse.documentNumber }}</p>
+  <p>Id de departamento: {{ findEmployedResponse.departmentId.id }}</p>
+  <p>fecha de creación del empleado: {{ findEmployedResponse.hourCreation }}</p>
+  <p>Departamento: {{findEmployedResponse.departmentId.departmentName}}</p>
+  <p>Codigo de departamento: {{findEmployedResponse.departmentId.departmentCode}}</p>
+  <p>fecha de creación del departamento: {{findEmployedResponse.departmentId.hourCreation}}</p>
+  <button (click)="deleteEmployed()">Eliminar Empleado</button>
+</div>

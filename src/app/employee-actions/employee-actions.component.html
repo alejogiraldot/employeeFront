@@ -1,0 +1,19 @@
+<div class="container">
+  <button (click)="toggleCreateView()">Crear Empleado</button>
+  <button (click)="toggleFindView()">Buscar Empleado</button>
+  <button (click)="toggleCreateDepartmentView()">Crear Departamento</button>
+  <button (click)="toggleFindDepartmentView()">Buscar Departamento</button>
+</div>
+
+<div *ngIf="showCreateView">
+  <app-create-employed></app-create-employed>
+</div>
+<div *ngIf="showFindView">
+  <app-find-employed></app-find-employed>
+</div>
+<div *ngIf="showCreateDepartmentView">
+  <app-create-department></app-create-department>
+</div>
+<div *ngIf="showFindDepartmentView">
+  <app-find-department></app-find-department>
+</div>

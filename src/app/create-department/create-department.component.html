@@ -1,0 +1,9 @@
+<div class="container">
+    <form>
+      <label for="departmentCode">Código de Departamento:</label>
+      <input type="text" id="departmentCode" name="departmentCode" [(ngModel)]="createDepartmentRequest.departmentCode">
+      <label for="departmentName">Nombre de Departamento:</label>
+      <input type="text" id="departmentName" name="departmentName" [(ngModel)]="createDepartmentRequest.departmentName">
+      <button (click)="createDepartment()">Crear Departamento</button>
+    </form>
+  </div>

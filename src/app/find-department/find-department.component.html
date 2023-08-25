@@ -1,0 +1,11 @@
+<div class="container">
+    <label for="departmentId">Ingrese el ID del Departamento:</label>
+    <input type="number" id="departmentId" [(ngModel)]="departmentId">
+    <button (click)="findDepartmentById()">Buscar Departamento por ID</button>
+  </div>
+  
+  <div *ngIf="findDepartmentResponse" class="container">
+    <p>Código del Departamento: {{ findDepartmentResponse.departmentCode }}</p>
+    <p>Nombre del Departamento: {{ findDepartmentResponse.departmentName }}</p>
+    <p>Hora de Creación: {{ findDepartmentResponse.hourCreation }}</p>
+  </div>
